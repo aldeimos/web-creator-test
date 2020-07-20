@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../assets/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat Semi-Bold';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../assets/fonts/Montserrat-SemiBold.ttf');
+}
+
+
 body {
   --dark-gray:        #323232;
   --gray:             #C9C9C9;
@@ -8,6 +23,7 @@ body {
   --font-form-label:    12px;
   --font-section-text:  14px;
   --font-button-text:   15px;
+  --font-subtitle:      16px;
   --font-section-title: 24px;
 }
 
