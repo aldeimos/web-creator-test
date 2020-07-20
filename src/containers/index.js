@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { loadFakeJSONComponents } from '../api';
+
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+import './index.css';
 
 const App = () => {
+
+  useEffect(() => {
+    const fetchFakeJSON = async () => {
+      const response = await loadFakeJSONComponents();
+      console.log(response);
+    };
+
+    fetchFakeJSON();
+  }, []);
   return (
-    <div>приве</div>
+    <>
+      <Header/>
+      <main className="main">
+        <div className="container">
+
+        </div>
+      </main>
+      <Footer/>
+    </>
   )
 };
 
