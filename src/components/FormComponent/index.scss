@@ -1,0 +1,26 @@
+.contacts-us {
+
+  &__title {
+    margin-bottom: 24px;
+
+    font-family: 'Montserrat Semi-Bold', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: var(--font-section-title);
+    line-height: 29px;
+    color: var(--dark-gray);
+  }
+}
+
+@media (min-width: 768px) {
+  .form-row .col-md-6,
+  .form-row .col-md-8 {
+    padding: 0;
+  }
+
+  .form-row .col-md-6 {
+    flex: 0 0 calc(50% - 12px);
+    width: calc(50% - 12px);
+  }
+}
+

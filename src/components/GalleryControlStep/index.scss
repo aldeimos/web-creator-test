@@ -5,8 +5,8 @@
   border-radius: 50%;
 
   background-color: var(--gray);
-}
 
-.gallery-control-step--active {
-  background-image: var(--emerald-gradient);
+  &--active {
+     background-image: var(--emerald-gradient);
+   }
 }

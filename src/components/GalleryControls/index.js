@@ -2,7 +2,7 @@ import React from 'react';
 
 import GalleryControlStep from '../GalleryControlStep';
 
-import './index.css'
+import './index.scss'
 
 const GalleryControls = () => {
   return (

@@ -3,7 +3,7 @@ import React from 'react';
 import GalleryItem from '../GalleryItem';
 import GalleryControls from '../GalleryControls';
 
-import './index.css';
+import './index.scss';
 
 export const GalleryComponent = ({ id, images, slidesPerView, title}) => {
 

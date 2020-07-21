@@ -73,6 +73,7 @@
     "title": "Свяжитесь с нами",
     "fields": [
       {
+        "id": 1,
         "name": "name",
         "group": "main",
         "type": "text",
@@ -80,6 +81,7 @@
         "required": true
       },
       {
+        "id": 2,
         "name": "phone",
         "group": "main",
         "type": "phone",
@@ -87,6 +89,7 @@
         "required": true
       },
       {
+        "id": 3,
         "name": "email",
         "group": "main",
         "type": "email",
@@ -94,6 +97,7 @@
         "required": true
       },
       {
+        "id": 4,
         "name": "appointment_date",
         "group": "main",
         "type": "date",
@@ -101,13 +105,15 @@
         "required": true
       },
       {
-        "name": "name",
+        "id": 5,
+        "name": "comment",
         "group": "additional",
         "type": "textarea",
         "label": "Комментарий",
         "required": false
       },
       {
+        "id": 6,
         "name": "agreement",
         "type": "checkbox",
         "label": "<span>Я даю согласие на обработку персональных данных согласно <a href='#'>политике конфиденциальности</a>.</span>"
