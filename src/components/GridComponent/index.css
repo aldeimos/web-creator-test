@@ -1,0 +1,31 @@
+.about-us {
+  margin-bottom: 40px;
+}
+
+.about-us__title {
+  margin-bottom: 12px;
+
+  font-family: 'Montserrat Semi-Bold', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--dark-gray);
+}
+
+.about-us__text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--black);
+}
+
+.about-us__text p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.about-us__text p:last-child {
+  margin-bottom: 0;
+}

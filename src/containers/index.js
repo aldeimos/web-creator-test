@@ -33,9 +33,12 @@ const App = () => {
 
   const renderComponents = () => {
       return componentsData.components.map((component) => {
-        console.log(component);
-        return components[component.type]({...component.metadata});
+        return components[component.type]({id: component.id, ...component.metadata});
       });
+  };
+
+  const renderForm = () => {
+
   };
 
 

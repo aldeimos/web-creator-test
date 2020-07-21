@@ -1,27 +1,54 @@
 {
   "components": [
     {
+      "id": 1,
       "type": "GalleryComponent",
       "metadata": {
         "title": "Галерея",
         "images": [
-          "035.png",
-          "032.png",
-          "022.png",
-          "016.png",
-          "028.png",
-          "014.png",
-          "025.png",
-          "030.png"
+          {
+            "id": 1,
+            "src": "035.png"
+          },
+          {
+            "id": 2,
+            "src": "032.png"
+          },
+          {
+            "id": 3,
+            "src": "022.png"
+          },
+          {
+            "id": 4,
+            "src": "016.png"
+          },
+          {
+            "id": 5,
+            "src": "028.png"
+          },
+          {
+            "id": 6,
+            "src": "014.png"
+          },
+          {
+            "id": 7,
+            "src": "025.png"
+          },
+          {
+            "id": 8,
+            "src": "030.png"
+          }
         ],
         "slidesPerView": 3
       }
     },
     {
+      "id": 2,
       "type": "GridComponent",
       "metadata": {
         "components": [
           {
+            "id": 1,
             "type": "RichTextComponent",
             "col": "md-6",
             "metadata": {
@@ -30,6 +57,7 @@
             }
           },
           {
+            "id": 2,
             "type": "RichTextComponent",
             "col": "md-6",
             "metadata": {

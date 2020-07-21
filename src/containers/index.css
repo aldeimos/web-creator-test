@@ -14,6 +14,7 @@
 
 
 body {
+  --black:            #000000;
   --dark-gray:        #323232;
   --gray:             #C9C9C9;
   --emerald-gradient: linear-gradient(91.83deg, #93E08C -1.93%, #78CEBF 97.03%);
@@ -25,6 +26,7 @@ body {
   --font-button-text:   15px;
   --font-subtitle:      16px;
   --font-section-title: 24px;
+  --font-page-title:    32px;
 }
 
 * {
