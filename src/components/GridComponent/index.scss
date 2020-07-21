@@ -7,7 +7,7 @@
     font-family: 'Montserrat Semi-Bold', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: var(--font-section-title);
     line-height: 29px;
     color: var(--dark-gray);
   }
@@ -16,7 +16,7 @@
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: var(--font-section-text);
     line-height: 20px;
     color: var(--black);
 

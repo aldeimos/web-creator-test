@@ -1,7 +1,8 @@
 import React from 'react';
 
-const FormInput = (props) => {
-  const { id, name, label, type, required, group } = props;
+import './index.scss';
+
+const FormInput = ({ name, label, type, required, group }) => {
 
   return (
     <div className={group === 'main' ? 'form-group col-md-6' : 'form-group col-md-12'}>

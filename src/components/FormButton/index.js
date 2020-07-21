@@ -1,8 +1,10 @@
 import React from 'react';
 
+import './index.scss';
+
 const FormButton = ({ text }) => {
   return (
-    <button>
+    <button className="form-button">
       {text}
     </button>
   )
