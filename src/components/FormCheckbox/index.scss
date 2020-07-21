@@ -1,0 +1,45 @@
+.form-checkbox {
+
+  &__input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &__box {
+    position: absolute;
+    left: 5px;
+    
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid var(--gray);
+    border-radius: 2px;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    padding-left: 36px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--font-form-label);
+    line-height: 17px;
+    color: var(--dark-gray);
+  }
+
+  &__input:checked + .form-checkbox__box {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/checkbox_icon.svg');
+  }
+
+  a {
+    color: var(--accent-link);
+
+    &:hover {
+      color: var(--accent-link);
+    }
+  }
+}

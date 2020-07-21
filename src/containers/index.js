@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import components from '../components';
 
-import './index.css';
+import './index.scss';
 
 const App = () => {
   const [componentsData, setComponentsData] = useState(null);
@@ -33,11 +33,13 @@ const App = () => {
 
   const renderComponents = () => {
       return componentsData.components.map((component) => {
-        console.log(component);
-        return components[component.type]({...component.metadata});
+        return components[component.type]({id: component.id, ...component.metadata});
       });
   };
 
+  const renderForm = () => {
+    return components['FormComponent']({...componentsData.form});
+  };
 
   return (
     <>
@@ -45,8 +47,10 @@ const App = () => {
       <main className="main">
         <div className="container">
           {componentsData && componentsData.components && renderComponents()}
+          {componentsData && componentsData.form && renderForm()}
         </div>
         {loading && <div>Загрузка</div>}
+        {error && <div>Ошибка</div>}
       </main>
       <Footer/>
     </>

@@ -1,0 +1,14 @@
+.form-button {
+  padding: 12px 24px;
+
+  font-family: 'Montserrat Semi-Bold', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--font-button-text);
+  line-height: 18px;
+  color: var(--dark-gray);
+
+  background-image: var(--emerald-gradient);
+  border: 0;
+  border-radius: 3px;
+}

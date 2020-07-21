@@ -1,27 +1,54 @@
 {
   "components": [
     {
+      "id": 1,
       "type": "GalleryComponent",
       "metadata": {
         "title": "Галерея",
         "images": [
-          "035.png",
-          "032.png",
-          "022.png",
-          "016.png",
-          "028.png",
-          "014.png",
-          "025.png",
-          "030.png"
+          {
+            "id": 1,
+            "src": "035.png"
+          },
+          {
+            "id": 2,
+            "src": "032.png"
+          },
+          {
+            "id": 3,
+            "src": "022.png"
+          },
+          {
+            "id": 4,
+            "src": "016.png"
+          },
+          {
+            "id": 5,
+            "src": "028.png"
+          },
+          {
+            "id": 6,
+            "src": "014.png"
+          },
+          {
+            "id": 7,
+            "src": "025.png"
+          },
+          {
+            "id": 8,
+            "src": "030.png"
+          }
         ],
         "slidesPerView": 3
       }
     },
     {
+      "id": 2,
       "type": "GridComponent",
       "metadata": {
         "components": [
           {
+            "id": 1,
             "type": "RichTextComponent",
             "col": "md-6",
             "metadata": {
@@ -30,6 +57,7 @@
             }
           },
           {
+            "id": 2,
             "type": "RichTextComponent",
             "col": "md-6",
             "metadata": {
@@ -45,6 +73,7 @@
     "title": "Свяжитесь с нами",
     "fields": [
       {
+        "id": 1,
         "name": "name",
         "group": "main",
         "type": "text",
@@ -52,6 +81,7 @@
         "required": true
       },
       {
+        "id": 2,
         "name": "phone",
         "group": "main",
         "type": "phone",
@@ -59,6 +89,7 @@
         "required": true
       },
       {
+        "id": 3,
         "name": "email",
         "group": "main",
         "type": "email",
@@ -66,6 +97,7 @@
         "required": true
       },
       {
+        "id": 4,
         "name": "appointment_date",
         "group": "main",
         "type": "date",
@@ -73,13 +105,15 @@
         "required": true
       },
       {
-        "name": "name",
+        "id": 5,
+        "name": "comment",
         "group": "additional",
         "type": "textarea",
         "label": "Комментарий",
         "required": false
       },
       {
+        "id": 6,
         "name": "agreement",
         "type": "checkbox",
         "label": "<span>Я даю согласие на обработку персональных данных согласно <a href='#'>политике конфиденциальности</a>.</span>"

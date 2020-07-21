@@ -1,0 +1,38 @@
+.gallery-controls__control {
+
+  &--center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .gallery-control-step:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  &--left,
+  &--right {
+    width: 32px;
+    height: 32px;
+
+    background-color: var(--gray);
+
+    &:hover {
+      background: var(--emerald-gradient);
+
+      cursor: url('../../assets/images/cursor-pointer.svg'), pointer;
+    }
+  }
+
+  &--left {
+    margin-right: auto;
+
+    mask-image: url('../../assets/images/slider-left.svg');
+  }
+
+  &--right {
+    margin-left: auto;
+
+    mask-image: url('../../assets/images/slider-right.svg');
+  }
+}

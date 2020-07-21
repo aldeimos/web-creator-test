@@ -1,0 +1,17 @@
+.header {
+  margin-bottom: 40px;
+  padding: 25px 0;
+
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+
+  &__title {
+    margin-bottom: 0;
+
+    font-family: 'Montserrat Semi-Bold', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: var(--font-subtitle);
+    line-height: 20px;
+    color: var(--dark-gray);
+  }
+}
