@@ -2,10 +2,13 @@ import React from 'react';
 
 import './index.scss';
 
-const GalleryControlStep = ({ isActive, handler }) => {
+const GalleryControlStep = ({ isActive, setActiveSlide }) => {
 
   return (
-    <div className={isActive ? 'gallery-control-step gallery-control-step--active' : 'gallery-control-step'}/>
+    <div
+      className={isActive ? 'gallery-control-step gallery-control-step--active' : 'gallery-control-step'}
+      onClick={setActiveSlide}
+    />
   )
 };
 
