@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useObserver, observer } from 'mobx-react';
-import { StoreContext } from './StoreProvider';
+import { useObserver } from 'mobx-react';
 import { loadFakeJSONComponents } from '../api';
 
 import Header from '../components/Header';
@@ -8,15 +7,13 @@ import Footer from '../components/Footer';
 import components from '../components';
 
 import './index.scss';
+import { StoreContext } from './StoreProvider';
+
 
 const App = () => {
-  const [componentsData, setComponentsData] = useState(null);
+  const store = React.useContext(StoreContext);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const store = React.useContext(StoreContext);
-
-
-  console.log(store.memes);
 
   useEffect(() => {
     const fetchFakeJSON = async () => {
@@ -25,7 +22,8 @@ const App = () => {
 
         const response = await loadFakeJSONComponents();
 
-        setComponentsData(response);
+        store.setComponentsData(response);
+        store.setGalleryImages(response.components[0].metadata.images);
 
         setLoading(false);
 
@@ -38,36 +36,31 @@ const App = () => {
   }, []);
 
   const renderComponents = () => {
-      return componentsData.components.map((component) => {
-        return components[component.type]({id: component.id, ...component.metadata});
+      return store.componentsData.components.map((component) => {
+        return components[component.type]({ store, id: component.id, ...component.metadata});
       });
   };
 
   const renderForm = () => {
-    return components['FormComponent']({...componentsData.form});
+    return components['FormComponent']({...store.componentsData.form});
   };
 
   return useObserver(() => (
-    <>
+    <div>
       <Header/>
       <main
         className="main"
-        onClick={() => {
-          console.log('kek');
-          store.addMeme('KEKEER')
-        }}
       >
         <div className="container">
-          {store.memes.map((meme) => <span>{meme}</span>)}
-          {componentsData && componentsData.components && renderComponents()}
-          {componentsData && componentsData.form && renderForm()}
+          {store.componentsData && store.componentsData.components && renderComponents()}
+          {store.componentsData && store.componentsData.form && renderForm()}
         </div>
         {loading && <div>Загрузка</div>}
         {error && <div>Ошибка</div>}
       </main>
       <Footer/>
-    </>
-  ));
+    </div>
+  ))
 };
 
 export default App;

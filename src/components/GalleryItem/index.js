@@ -4,6 +4,8 @@ import './index.scss';
 
 const GalleryItem = ({ src }) => {
 
+  console.log(src);
+
   return (
     <div className="gallery-item col-sm-12 col-md-6 col-xl-4">
         <img
