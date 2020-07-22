@@ -9,10 +9,16 @@ const StoreProvider = ({ children }) => {
     galleryImages: [],
     activeGalleryImages: [],
     activeSlide: 1,
+    formData: {
+      name: '',
+      appointment_date: '',
+      phone: '',
+      email: '',
+      comment: ''
+    },
     setComponentsData: (componentData) => {
       store.componentsData = componentData
     },
-
     setGalleryImages: (images) => {
       store.galleryImages = images;
       store.activeGalleryImages = images.slice(0, 3)
@@ -31,8 +37,10 @@ const StoreProvider = ({ children }) => {
     incrementActiveSlide: () => {
       store.activeSlide = store.activeSlide + 1 > 3 ? 1 : store.activeSlide + 1;
       store.setActiveImages();
+    },
+    setFormData: (field, value) => {
+      store.formData[field] = value;
     }
-
   }));
 
   return (

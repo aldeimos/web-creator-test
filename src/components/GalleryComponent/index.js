@@ -7,7 +7,6 @@ import './index.scss';
 
 export const GalleryComponent = ({ store, id, title}) => {
 
-
   return (
     <div
       className="gallery"

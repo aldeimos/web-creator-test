@@ -1,0 +1,35 @@
+.form-textarea {
+  width: 100%;
+  margin-bottom: 24px;
+  
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    padding-left: 19px;
+  }
+
+  label {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--dark-gray);
+  }
+
+  textarea {
+    min-height: 149px;
+
+    border-radius: 0;
+    resize: none;
+    transition: none;
+
+    &:focus {
+      border-image-slice: 1;
+      border-image-source: var(--emerald-gradient);
+
+      outline: none;
+      box-shadow: none;
+      border-color: transparent;
+    }
+  }
+}
