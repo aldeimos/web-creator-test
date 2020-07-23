@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/web-creator-test/static/css/main.135312ff.chunk.css",
+    "main.js": "/web-creator-test/static/js/main.5629c1bd.chunk.js",
+    "main.js.map": "/web-creator-test/static/js/main.5629c1bd.chunk.js.map",
+    "runtime-main.js": "/web-creator-test/static/js/runtime-main.d57ecef9.js",
+    "runtime-main.js.map": "/web-creator-test/static/js/runtime-main.d57ecef9.js.map",
+    "static/css/2.9ff99f11.chunk.css": "/web-creator-test/static/css/2.9ff99f11.chunk.css",
+    "static/js/2.0e38d97f.chunk.js": "/web-creator-test/static/js/2.0e38d97f.chunk.js",
+    "static/js/2.0e38d97f.chunk.js.map": "/web-creator-test/static/js/2.0e38d97f.chunk.js.map",
+    "index.html": "/web-creator-test/index.html",
+    "precache-manifest.4f5c15c189179111b40d1790b7b474dc.js": "/web-creator-test/precache-manifest.4f5c15c189179111b40d1790b7b474dc.js",
+    "service-worker.js": "/web-creator-test/service-worker.js",
+    "static/css/2.9ff99f11.chunk.css.map": "/web-creator-test/static/css/2.9ff99f11.chunk.css.map",
+    "static/css/main.135312ff.chunk.css.map": "/web-creator-test/static/css/main.135312ff.chunk.css.map",
+    "static/js/2.0e38d97f.chunk.js.LICENSE.txt": "/web-creator-test/static/js/2.0e38d97f.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/web-creator-test/static/media/slider-right.48efec9e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d57ecef9.js",
+    "static/css/2.9ff99f11.chunk.css",
+    "static/js/2.0e38d97f.chunk.js",
+    "static/css/main.135312ff.chunk.css",
+    "static/js/main.5629c1bd.chunk.js"
+  ]
+}
