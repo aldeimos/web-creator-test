@@ -30,7 +30,7 @@
   }
 
   &__header {
-    margin-bottom: 24px;
+    margin-bottom: var(--bottom-indent);
   }
 
   &__close {

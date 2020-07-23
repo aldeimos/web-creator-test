@@ -2,7 +2,7 @@
   margin-bottom: 50px;
 
   &__title {
-    margin-bottom: 24px;
+    margin-bottom: var(--bottom-indent);
 
     font-family: 'Montserrat Semi-Bold', sans-serif;
     font-style: normal;
@@ -13,16 +13,18 @@
   }
 
   &__images {
-    margin-bottom: 24px;
+    margin-bottom: var(--bottom-indent);
   }
 }
 
 @media (max-width: 767px) {
   .gallery {
+    margin-bottom: 25px;
 
     &__images {
       overflow: scroll;
       scroll-snap-type: x mandatory;
+      margin-bottom: 0;
 
       .row {
         flex-wrap: nowrap;
