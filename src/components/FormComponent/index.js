@@ -21,10 +21,6 @@ export const FormComponent = ({ store, title, fields, field_groups, submit_butto
         >
           {fields.map((field) => {
 
-            if (field.type === 'checkbox' &&  field_group[0] === 'main') {
-              return <FormCheckbox changeHandler={store.setFormData} key={field.id} {...field}/>
-            }
-
             if (field.group === field_group[0] && field.type !== 'textarea') {
               return (
                 <FormInput
@@ -33,11 +29,18 @@ export const FormComponent = ({ store, title, fields, field_groups, submit_butto
                   key={field.id}
                   {...field}
                 />
-              )
+              );
             }
 
             if (field.type === 'textarea' && field_group[0] === 'additional') {
-              return <FormTextarea/>
+              return (
+                <FormTextarea
+                  value={store.formData}
+                  changeHandler={store.setFormData}
+                  key={field.id}
+                  {...field}
+                />
+              );
             }
           })}
         </div>
@@ -46,12 +49,28 @@ export const FormComponent = ({ store, title, fields, field_groups, submit_butto
   };
 
   const renderSubmitButton = () => {
-    return <FormButton formData={store.formData} {...submit_button}/>
+    return <FormButton {...submit_button}/>;
+  };
+
+  const renderCheckBox = () => {
+    const checkbox = fields[fields.length - 1];
+
+    return (
+      <div className="col-md-12">
+        <FormCheckbox
+          value={store.formData}
+          changeHandler={store.setFormData}
+          key={checkbox.id}
+          {...checkbox}
+        />
+      </div>
+    );
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(store.formData.name, store.formData.email);
+    store.resetFormData();
+    store.setFormPopup(true);
   };
 
   return (
@@ -66,6 +85,7 @@ export const FormComponent = ({ store, title, fields, field_groups, submit_butto
       >
         <div className="form-row">
           {renderFields()}
+          {renderCheckBox()}
           {renderSubmitButton()}
         </div>
       </form>
