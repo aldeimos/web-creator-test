@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/web-creator-test/static/css/main.4f539143.chunk.css",
+    "main.css": "/web-creator-test/static/css/main.819cfcae.chunk.css",
     "main.js": "/web-creator-test/static/js/main.5629c1bd.chunk.js",
     "main.js.map": "/web-creator-test/static/js/main.5629c1bd.chunk.js.map",
     "runtime-main.js": "/web-creator-test/static/js/runtime-main.d57ecef9.js",
@@ -9,10 +9,10 @@
     "static/js/2.0e38d97f.chunk.js": "/web-creator-test/static/js/2.0e38d97f.chunk.js",
     "static/js/2.0e38d97f.chunk.js.map": "/web-creator-test/static/js/2.0e38d97f.chunk.js.map",
     "index.html": "/web-creator-test/index.html",
-    "precache-manifest.a1ca14e0ed1af3fdfd5058b01641e766.js": "/web-creator-test/precache-manifest.a1ca14e0ed1af3fdfd5058b01641e766.js",
+    "precache-manifest.2c9b8aaff98ac27de5d0b2fed4966869.js": "/web-creator-test/precache-manifest.2c9b8aaff98ac27de5d0b2fed4966869.js",
     "service-worker.js": "/web-creator-test/service-worker.js",
     "static/css/2.9ff99f11.chunk.css.map": "/web-creator-test/static/css/2.9ff99f11.chunk.css.map",
-    "static/css/main.4f539143.chunk.css.map": "/web-creator-test/static/css/main.4f539143.chunk.css.map",
+    "static/css/main.819cfcae.chunk.css.map": "/web-creator-test/static/css/main.819cfcae.chunk.css.map",
     "static/js/2.0e38d97f.chunk.js.LICENSE.txt": "/web-creator-test/static/js/2.0e38d97f.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/web-creator-test/static/media/slider-right.48efec9e.svg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.d57ecef9.js",
     "static/css/2.9ff99f11.chunk.css",
     "static/js/2.0e38d97f.chunk.js",
-    "static/css/main.4f539143.chunk.css",
+    "static/css/main.819cfcae.chunk.css",
     "static/js/main.5629c1bd.chunk.js"
   ]
 }
