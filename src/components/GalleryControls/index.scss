@@ -36,3 +36,9 @@
     mask-image: url('../../assets/images/slider-right.svg');
   }
 }
+
+@media (max-width: 767px) {
+  .gallery-controls {
+    display: none;
+  }
+}

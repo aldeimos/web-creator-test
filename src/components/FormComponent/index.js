@@ -5,9 +5,9 @@ import FormCheckbox from '../FormCheckbox';
 import FormButton from '../FormButton';
 
 import './index.scss';
+import FormTextarea from '../FormTextarea';
 
-export const FormComponent = (props) => {
-  const { title, fields, field_groups, submit_button } = props;
+export const FormComponent = ({ store, title, fields, field_groups, submit_button }) => {
 
   const renderFields = () => {
 
@@ -21,12 +21,26 @@ export const FormComponent = (props) => {
         >
           {fields.map((field) => {
 
-            if (field.type === 'checkbox' &&  field_group[0] === 'main') {
-              return <FormCheckbox key={field.id} {...field}/>
+            if (field.group === field_group[0] && field.type !== 'textarea') {
+              return (
+                <FormInput
+                  value={store.formData}
+                  changeHandler={store.setFormData}
+                  key={field.id}
+                  {...field}
+                />
+              );
             }
 
-            if (field.group === field_group[0]) {
-              return <FormInput key={field.id} {...field}/>
+            if (field.type === 'textarea' && field_group[0] === 'additional') {
+              return (
+                <FormTextarea
+                  value={store.formData}
+                  changeHandler={store.setFormData}
+                  key={field.id}
+                  {...field}
+                />
+              );
             }
           })}
         </div>
@@ -34,8 +48,29 @@ export const FormComponent = (props) => {
     });
   };
 
-  const renderSumbitButton = () => {
-    return <FormButton {...submit_button}/>
+  const renderSubmitButton = () => {
+    return <FormButton {...submit_button}/>;
+  };
+
+  const renderCheckBox = () => {
+    const checkbox = fields[fields.length - 1];
+
+    return (
+      <div className="col-md-12">
+        <FormCheckbox
+          value={store.formData}
+          changeHandler={store.setFormData}
+          key={checkbox.id}
+          {...checkbox}
+        />
+      </div>
+    );
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    store.resetFormData();
+    store.setFormPopup(true);
   };
 
   return (
@@ -46,10 +81,12 @@ export const FormComponent = (props) => {
       <form
         action=""
         className="contacts-us__form"
+        onSubmit={submitHandler}
       >
         <div className="form-row">
           {renderFields()}
-          {renderSumbitButton()}
+          {renderCheckBox()}
+          {renderSubmitButton()}
         </div>
       </form>
     </section>

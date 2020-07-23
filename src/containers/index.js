@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { useObserver } from 'mobx-react';
+import { StoreContext } from './StoreProvider';
+import { observer } from 'mobx-react';
 import { loadFakeJSONComponents } from '../api';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import FormPopup from '../components/FormPopup';
 import components from '../components';
 
 import './index.scss';
-import { StoreContext } from './StoreProvider';
 
 
-const App = () => {
+const App = observer(() => {
   const store = React.useContext(StoreContext);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -42,10 +43,10 @@ const App = () => {
   };
 
   const renderForm = () => {
-    return components['FormComponent']({...store.componentsData.form});
+    return components['FormComponent']({store, ...store.componentsData.form});
   };
 
-  return useObserver(() => (
+  return (
     <div>
       <Header/>
       <main
@@ -59,8 +60,9 @@ const App = () => {
         {error && <div>Ошибка</div>}
       </main>
       <Footer/>
+      {store.formPopup && <FormPopup closeHandler={store.setFormPopup}/>}
     </div>
-  ))
-};
+  )
+});
 
 export default App;

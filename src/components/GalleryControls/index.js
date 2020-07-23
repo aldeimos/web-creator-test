@@ -14,14 +14,14 @@ const GalleryControls = ({ store }) => {
   return (
     <div className="gallery-controls">
       <div className="row">
-        <div className="col-sm-12 col-md-6 col-xl-4">
+        <div className="col-sm-12 col-md-4 col-xl-4">
           <div
             className="gallery-controls__control gallery-controls__control--left"
             onClick={() => store.decrementActiveSlide()}
           >
           </div>
         </div>
-        <div className="gallery-controls__control gallery-controls__control--center col-sm-12 col-md-6 col-xl-4">
+        <div className="gallery-controls__control gallery-controls__control--center col-sm-12 col-md-4 col-xl-4">
           <GalleryControlStep
             setActiveSlide={() => centerControlHandler(1)}
             isActive={store.activeSlide === 1}
@@ -35,7 +35,7 @@ const GalleryControls = ({ store }) => {
             isActive={store.activeSlide === 3}
           />
         </div>
-        <div className="col-sm-12 col-md-6 col-xl-4">
+        <div className="col-sm-12 col-md-4 col-xl-4">
           <div
             onClick={() => store.incrementActiveSlide()}
             className="gallery-controls__control gallery-controls__control--right"

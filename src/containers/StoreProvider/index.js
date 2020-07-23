@@ -9,15 +9,27 @@ const StoreProvider = ({ children }) => {
     galleryImages: [],
     activeGalleryImages: [],
     activeSlide: 1,
+    formData: {
+      name: '',
+      appointment_date: '',
+      phone: '',
+      email: '',
+      comment: '',
+      agreement: false,
+    },
+    formPopup: false,
     setComponentsData: (componentData) => {
       store.componentsData = componentData
     },
-
     setGalleryImages: (images) => {
       store.galleryImages = images;
-      store.activeGalleryImages = images.slice(0, 3)
-    },
 
+      if (window.innerWidth >= 768) {
+        store.activeGalleryImages = images.slice(0, 3)
+      } else {
+        store.activeGalleryImages = images;
+      }
+    },
     setActiveImages: () => {
       store.activeGalleryImages = store.galleryImages.slice(store.activeSlide === 1 ? 0 : (store.activeSlide * 3) - 3, store.activeSlide * 3);
     },
@@ -31,8 +43,23 @@ const StoreProvider = ({ children }) => {
     incrementActiveSlide: () => {
       store.activeSlide = store.activeSlide + 1 > 3 ? 1 : store.activeSlide + 1;
       store.setActiveImages();
+    },
+    setFormData: (field, value) => {
+      store.formData[field] = value;
+    },
+    resetFormData: () => {
+      store.formData = {
+        name: '',
+        appointment_date: '',
+        phone: '',
+        email: '',
+        comment: '',
+        agreement: false,
+      }
+    },
+    setFormPopup: (value) => {
+      store.formPopup = value;
     }
-
   }));
 
   return (
