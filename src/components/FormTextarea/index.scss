@@ -1,6 +1,6 @@
 .form-textarea {
   width: 100%;
-  margin-bottom: 24px;
+  margin-bottom: var(--bottom-indent);
   
   @media (min-width: 768px) {
     margin-bottom: 0;
@@ -29,7 +29,6 @@
 
       outline: none;
       box-shadow: none;
-      border-color: transparent;
     }
   }
 }

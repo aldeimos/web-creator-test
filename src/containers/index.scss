@@ -27,6 +27,12 @@ body {
   --font-subtitle:      16px;
   --font-section-title: 24px;
   --font-page-title:    32px;
+
+  --bottom-indent: 24px;
+
+  @media (max-width: 767px) {
+    --bottom-indent: 12px;
+  }
 }
 
 * {

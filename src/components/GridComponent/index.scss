@@ -30,3 +30,13 @@
   }
 }
 
+@media (max-width: 767px) {
+  .about-us {
+    margin-bottom: 20px;
+
+    .col-md-6:first-child {
+      margin-bottom: 12px;
+    }
+  }
+}
+
